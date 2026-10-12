@@ -1,2 +1,2 @@
-# intanpuspita.github
-personal website
+# personal_website
+Intan's digital corner
