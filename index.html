@@ -191,6 +191,59 @@
     border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
   }
 
+  .tools-section {
+  margin-top: 30px;
+}
+
+.tools-heading {
+  font-size: 20px;
+  color: #465748;
+  margin-bottom: 18px;
+}
+
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.tool-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #D5DDCE;
+  border-radius: 50%;
+  background: rgba(238, 241, 232, 0.65);
+  transition: all 0.25s ease;
+}
+
+.tool-icon img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.tool-icon:hover {
+  background: #E4EBDD;
+  transform: translateY(-4px);
+  border-color: #A8B99F;
+}
+
+@media (max-width: 600px) {
+  .tool-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .tool-icon img {
+    width: 22px;
+    height: 22px;
+  }
+}
+</style>
+
   /* EXPERIENCE - compact, sell-off style */
   .xp-list-wrap { display: flex; flex-direction: column; gap: 32px; }
   .xp-card {
@@ -557,6 +610,34 @@
           <span class="chip">Microsoft Excel</span>
           <span class="chip">Regulatory Compliance</span>
         </div>
+        <section class="tools-section">
+  <h3 class="tools-heading">Tools</h3>
+
+  <div class="tools-grid">
+    <div class="tool-icon">
+      <img src="https://cdn.simpleicons.org/microsoftexcel/217346" alt="Excel">
+    </div>
+
+    <div class="tool-icon">
+      <img src="https://cdn.simpleicons.org/googlesheets/34A853" alt="Google Sheets">
+    </div>
+
+    <div class="tool-icon">
+      <img src="https://cdn.simpleicons.org/notion/4479A1" alt="Notion">
+    </div>
+
+    <div class="tool-icon">
+      <img src="https://cdn.simpleicons.org/trello/F2C811" alt="Trello">
+    </div>
+
+    <div class="tool-icon">
+      <img src="https://cdn.simpleicons.org/claude/E97627" alt="Claude">
+    </div>
+
+    <div class="tool-icon">
+      <img src="https://cdn.simpleicons.org/chatgpt/E97627" alt="ChatGPT">
+    </div>
+
       </div>
     </div>
   </section>
