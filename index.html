@@ -192,12 +192,13 @@
   }
   .tools-section { margin-top: 30px;
   }
-  .tools-heading { font-size: 20px; color: #465748; margin-bottom: 18px;
+  .tools-heading { font-size: 20px; color: #465748; margin-bottom: 20px;
   }
-  .tools-grid { display: flex; flex-wrap: wrap; gap: 14px;
+  .tools-grid { display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; gap: 14px; overflow-x: auto; padding-bottom: 10px;
   }
   .tool-icon { 
-    width: 58px; height: 58px; display: flex; align-items: center; justify-content: center; 
+    width: 58px; height: 58px; min-width: 58px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center; 
     border: 1px solid #D5DDCE; border-radius: 50%;
     background: rgba(238, 241, 232, 0.65);
     transition: all 0.25s ease;
@@ -207,10 +208,8 @@
   .tool-icon:hover { background: #E4EBDD; transform: translateY(-4px); border-color: #A8B99F;
   }
   @media (max-width: 600px) {
-    .tool-icon { width: 48px; height: 48px; }
+    .tool-icon { width: 48px; height: 48px; min-width: 48px; }
     .tool-icon img { width: 22px; height: 22px; }
-}
-  .tool { display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 30px; flex-wrap: wrap;
 }
   
   /* EXPERIENCE - compact, sell-off style */
@@ -572,6 +571,7 @@
           <span class="chip">Fintech / Lending</span>
           <span class="chip">Workflow Optimization</span>
           <span class="chip">Data Integrity</span>
+          <span class="chip">KYC</span>
           <span class="chip">Cross-functional Coordination</span>
           <span class="chip">Settlement &amp; Reconciliation</span>
           <span class="chip">Payment Operation</span>
