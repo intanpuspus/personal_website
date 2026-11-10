@@ -190,7 +190,7 @@
     padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 500;
     border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
   }
-  .tools-section { margin-top: 30px;
+  .tools-section { margin-top: 20px;
   }
   .tools-heading { font-size: 20px; color: #465748; margin-bottom: 20px;
   }
@@ -331,21 +331,43 @@
   .project p { color: var(--text-soft); font-size: 14.5px; margin: 0 0 14px; flex: 1; }
 
   /* EDUCATION */
-  .edu-card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 20px; padding: 28px;
-    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; align-items: center;
+  .edu-layout {
+    display: grid;
+    gap: 40px;
   }
-  .edu-card h3 { font-family: 'Lora', serif; margin: 0 0 4px; font-size: 22px; }
-  .edu-card .school { color: var(--accent); font-weight: 600; font-size: 15px; }
-  .edu-card .meta { color: var(--muted); font-size: 13.5px; margin-top: 4px; }
-  .edu-card .gpa {
-    background: var(--chip-bg); color: var(--chip-text);
-    padding: 10px 16px; border-radius: 12px; font-size: 14px; font-weight: 600;
-    border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
-    white-space: nowrap;
+  .edu-group-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 16px;
   }
-
+  .edu-list {
+    display: grid;
+    gap: 16px;
+  }
+  .edu-card .edu-desc {
+    margin: 12px 0 0;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+  .edu-body {
+    flex: 1;
+  }
+  .edu-entry {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+  .edu-body h3 + .edu-entry {
+    margin-top: 12px;
+    padding-top: 0;
+    border-top: none;
+  }
+  
   /* PUBLICATIONS - clickable cards */
   .pub-list { display: grid; grid-template-columns: 1fr; gap: 14px; }
   .pub-card {
@@ -773,7 +795,7 @@
               <span class="chip">Music</span>
               <span class="chip">Self-development</span>
             </div>
-            <a class="project-visit" href="https://medium.com/@intanpuspitaa77_86220" target="_blank" rel="noopener">Read on Medium →</a>
+            <a class="project-visit" href="https://medium.com/@goldenrodiary" target="_blank" rel="noopener">Read on Medium →</a>
           </div>
         </article>
 
@@ -877,17 +899,76 @@
         <p class="eyebrow">Education</p>
         <h2>Where I <em>studied</em></h2>
       </div>
-      <div class="edu-card reveal">
-        <div>
-          <h3>Bachelor's degree, Archaeology</h3>
-          <div class="school">Universitas Gadjah Mada (UGM)</div>
-          <div class="meta">Aug 2019 — Aug 2023</div>
-        </div>
-        <div class="gpa">GPA 3.67 / 4.00 · Cumlaude</div>
-      </div>
-    </div>
-  </section>
 
+    <div class="edu-layout">
+
+      <!-- Sub-section 1: Academic program -->
+      <div class="edu-group reveal">
+        <h3 class="edu-group-title">Academic program</h3>
+        <div class="edu-card">
+          <div>
+            <h3>Bachelor's degree, Archaeology</h3>
+            <div class="school">Universitas Gadjah Mada</div>
+            <div class="meta">Aug 2019 — Aug 2023</div>
+          </div>
+          <div class="gpa">GPA 3.67 / 4.00 · Cum Laude</div>
+        </div>
+      </div>
+
+      <!-- Sub-section 2: Activities -->
+      <div class="edu-group reveal">
+        <h3 class="edu-group-title">Activities</h3>
+        <div class="edu-list">
+
+          <div class="edu-card">
+            <div class="edu-body">
+              <h3>Organization</h3>
+
+              <div class="edu-entry">
+                <div class="school">Paramadaya Choir</div>
+                <div class="meta">Nov 2019 — Nov 2021</div>
+                <p class="edu-desc">Joined as a member since 2019 and HRD Staff since 2020, contributing to member development, internal coordination, and team engagement. Achieved two First Place awards at LPS UGM 2019: Paduan Suara Sejenis and Festival Bahana Gadjah Mada.</p>
+              </div>
+
+              <div class="edu-entry">
+                <div class="school">Himpunan Mahasiswa Arkeologi UGM</div>
+                <div class="meta">Feb 2020 — Feb 2021</div>
+                <p class="edu-desc">Served in the Talent and Interest Division of HIMA, initially as Treasurer, supporting divisional financial management, coordinating activities, and fostering student engagement through talent and interest development initiatives.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-body">
+              <h3>Volunteer</h3>
+
+              <div class="edu-entry">
+                <div class="school">Coordinator of Social Humanities Cluster KKN-PPM UGM Gilangharjo</div>
+                <div class="meta">Jun 2022 — Aug 2022</div>
+                <p class="edu-desc">Coordinated the Social Humanities Cluster during KKN-PPM, overseeing program planning, team coordination, and community engagement to implement impactful social and humanities initiatives.</p>
+              </div>
+
+              <div class="edu-entry">
+                <div class="school">Fundraising Coordinator of Abhiseka 2020</div>
+                <div class="meta">Mar 2020 — Oct 2020</div>
+                <p class="edu-desc">Led fundraising initiatives, coordinated donation campaigns, and managed fundraising strategies to support HIMA programs: Abhiseka (2020).</p>
+              </div>
+
+              <div class="edu-entry">
+                <div class="school">Fundraising Assistant of Festival Arkeologi #4</div>
+                <div class="meta">Sept 2019 — Nov 2019</div>
+                <p class="edu-desc">Supported fundraising activities through campaign coordination, donor engagement, and administrative assistance to ensure effective fundraising operations.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+  
   <!-- WRITING -->
   <section id="writing">
     <div class="container">
