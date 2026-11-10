@@ -258,6 +258,30 @@
     margin: 0; color: var(--text); font-weight: 600;
   }
 
+  .cv-download {
+    margin: 24px 0 32px;
+  }
+  .cv-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 22px;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  .cv-btn:hover {
+    opacity: 0.7;
+    transform: translateY(-2px);
+  }
+  .cv-icon {
+    font-size: 18px;
+  }
+
   /* PROJECTS with photos */
   .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
   @media (max-width: 780px) { .projects { grid-template-columns: 1fr; } }
@@ -666,6 +690,13 @@
         <p class="eyebrow">Experience</p>
         <h2>Where I've <em>delivered</em></h2>
       </div>
+
+      <div class="cv-download reveal">
+      <a href="CV.pdf" download="My_CV.pdf" class="cv-btn">
+        <span>Download My CV</span>
+        <span class="cv-icon">↓</span>
+      </a>
+    </div>
       <div class="xp-list-wrap reveal">
 
         <!-- MEKAR -->
