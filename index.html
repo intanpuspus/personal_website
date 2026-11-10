@@ -331,6 +331,20 @@
   .project p { color: var(--text-soft); font-size: 14.5px; margin: 0 0 14px; flex: 1; }
 
   /* EDUCATION */
+  .edu-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 20px; padding: 28px;
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; align-items: center;
+}
+.edu-card h3 { font-family: 'Lora', serif; margin: 0 0 4px; font-size: 22px; }
+.edu-card .school { color: var(--accent); font-weight: 600; font-size: 15px; }
+.edu-card .meta { color: var(--muted); font-size: 13.5px; margin-top: 4px; }
+.edu-card .gpa {
+  background: var(--chip-bg); color: var(--chip-text);
+  padding: 10px 16px; border-radius: 12px; font-size: 14px; font-weight: 600;
+  border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
+  white-space: nowrap;
+}
   .edu-layout {
     display: grid;
     gap: 40px;
@@ -902,7 +916,6 @@
 
     <div class="edu-layout">
 
-      <!-- Sub-section 1: Academic program -->
       <div class="edu-group reveal">
         <h3 class="edu-group-title">Academic program</h3>
         <div class="edu-card">
@@ -915,11 +928,8 @@
         </div>
       </div>
 
-      <!-- Sub-section 2: Activities -->
       <div class="edu-group reveal">
         <h3 class="edu-group-title">Activities</h3>
-        <div class="edu-list">
-
           <div class="edu-card">
             <div class="edu-body">
               <h3>Organization</h3>
@@ -937,6 +947,7 @@
               </div>
             </div>
           </div>
+      </div>
 
           <div class="edu-card">
             <div class="edu-body">
